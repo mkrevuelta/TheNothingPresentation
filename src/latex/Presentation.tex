@@ -1,0 +1,33 @@
+% Dear text editor,
+% Please, keep this file encoded in in latin1 (ISO-8859-1).
+% Here are some Spanish special characters: ·ÈÌÛ˙¸Ò¡…Õ”‹—
+
+\input{src/latex/PackagesAndCustomCommands.tex}
+\input{src/latex/TitlePageData.tex}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Index}
+    \setcounter{tocdepth}{1}
+    \setlength{\leftskip}{3em\relax}
+    \tableofcontents
+\end{frame}
+
+\input{src/latex/1_Intro.tex}
+\input{src/latex/2_SomeStuff.tex}
+\input{src/latex/3_SomeMoreStuff.tex}
+
+\section*{Questions} % * means "don't show this in the table of contents"
+
+\begin{frame}[c]
+    \begin{center}
+        {\colorespecial \Huge Thank you very much\\[2ex] Any questions?}
+    \end{center}
+\end{frame}
+
+\end{document}
+

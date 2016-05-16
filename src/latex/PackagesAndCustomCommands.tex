@@ -1,0 +1,75 @@
+% Dear text editor,
+% Please, keep this file encoded in in latin1 (ISO-8859-1).
+% Here are some Spanish special characters: áéíóúüñÁÉÍÓÜÑ
+
+\usepackage[latin1]{inputenc}  % codificación de caracteres de este archivo
+\usepackage[spanish]{babel}    % Traducir: ``abstract'' ---> ``resumen''   etc.
+\usepackage{listings}          % listados de código fuente
+\usepackage{amssymb}           % símbolos para R y C (reales y complejos)
+\usepackage[T1]{fontenc}       % meter fuentes vectoriales
+\usepackage{lmodern}           % fuentes
+\usepackage{graphicx}          % figuras
+\usepackage{color}             % color
+\usepackage{pdfpages}          % inserción de PDFs externos en este doc.
+\usepackage{upquote}           % comilla recta con \textquotesingle
+\usepackage{colortbl}          % tablas coloreadas
+%\usepackage[many]{tcolorbox}   % Cajas de colores
+
+\usepackage[implicit=false]{hyperref}  % enlaces web (el parámetro implicit=false
+                                       % evita problemas con el # de #include etc.)
+                                       % uso explícito: \href[options]{URL}{text}
+                                       %                \url{URL}
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+\spanishdecimal{.}
+
+\graphicspath{{src/figs/}}      % rutas de las figuras
+
+\newcommand{\colorespecial}{\usebeamercolor[fg]{section in toc}}
+
+\newcommand{\cpponce} {{\textsuperscript{\tiny\textbf{C++11}}}}
+\newcommand{\cpponcee}{{\colorespecial\textsuperscript{\tiny\textbf{C++11}}}}
+
+\definecolor{verdecomentario}{rgb}{0.20, 0.35, 0.10}
+
+% estilo de los listados de código
+\lstset
+{
+    language=C++,
+    numbers=none,                 % números de línea
+    %numberstyle=\tiny,            % tamaño de los num. de línea
+    extendedchars=true,           % acentos, eñes...
+    %frame=single,                 % marco que encuadra al listado
+    basicstyle=\small\ttfamily,   % tipo de letra
+    showstringspaces=false,       % no mostrar espacios de las cadenas
+    keywordstyle=\color{MyMainColor}\ttfamily,
+    %stringstyle=\color{red}\ttfamily,
+    commentstyle=\color{verdecomentario}\ttfamily % ,
+    %morecomment=[l][\color{magenta}]{\#}
+}
+
+
+\newenvironment{specialframe}{\begin{frame}[fragile,environment=specialframe]}{\end{frame}}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+%\setbeamercolor{block title}{fg=black,bg=gray!40}
+%\setbeamercolor{block body}{fg=black,bg=gray!10}
+%\setbeamercolor{block title alerted}{fg=red,bg=gray!40}
+%\setbeamercolor{block title example}{fg=black,bg=green!20}
+%\setbeamercolor{block body example}{fg=black,bg=green!5}
+
+\setbeamercovered{transparent=40}
+
+\setbeamertemplate{section in toc}[sections numbered]
+

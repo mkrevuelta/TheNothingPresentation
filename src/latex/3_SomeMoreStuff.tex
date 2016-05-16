@@ -1,0 +1,44 @@
+% Dear text editor,
+% Please, keep this file encoded in in latin1 (ISO-8859-1).
+% Here are some Spanish special characters: ·ÈÌÛ˙¸Ò¡…Õ”‹—
+
+\section[More]{Some more stuff}
+
+\begin{frame}[c]
+    \begin{center}
+        {\colorespecial \Huge Some more stuff}
+    \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{A frame with a listing}
+    \begin{block}{This is a program in plain old C}
+        \begin{lstlisting}
+#include <stdio.h>    // A comment
+
+int main ()   /* Another comment */
+{
+    printf ("Hola mundo.\n");
+    return 0;
+}
+        \end{lstlisting}
+    \end{block}
+    Note that the frame must be declared ``fragile''.
+\end{frame}
+
+\begin{frame}{For your eyes only (1/3)}
+    This is the \textbf{first} of a series of \textbf{three} frames.
+\end{frame}
+
+\begin{frame}<handout:0>{For your eyes only (2/3)}
+    This is the \textbf{second} of a series of \textbf{three} frames.\\[1ex]
+    This frame is just for the live show.\\[1ex]
+    It won't appear in the handout.
+\end{frame}
+
+\begin{frame}{For your eyes only (3/3)}
+    This is the \textbf{third} of a series of \textbf{three} frames.\\[1ex]
+    Did you see the second one?\\[1ex]
+    It doesn't appear in the handout!\\[1ex]
+    Perfect for jokes.
+\end{frame}
+
